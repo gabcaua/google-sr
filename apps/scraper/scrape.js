@@ -15,7 +15,7 @@ Search: ${query}
 ====================================
 `)
 
-axios.get('https://www.google.com/search', {
+axios.get('https://www.google.com.br/search', {
     headers: {
         'Accept': 'text/html',
         'accept-encoding': 'gzip, deflate',
@@ -26,7 +26,9 @@ axios.get('https://www.google.com/search', {
     },
     params: {
         q: query,
-        gbv: '1'
+        gbv: '1',
+        hl: 'pt',
+        cr: 'BR'
     },
     responseType: "text",
     responseEncoding: 'utf-8',
